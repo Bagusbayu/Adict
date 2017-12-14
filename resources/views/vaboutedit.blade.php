@@ -35,7 +35,7 @@
                     </div>
                     -->
                     <button type = "submit" class = "btn btn-default">Submit</button>
-                    <a type="reset" class="btn btn-md btn-danger" href="{{url('viewartikel')}}">Cancel</a>
+                    <a type="reset" class="btn btn-md btn-danger" href="{{route('viewabout.index')}}">Cancel</a>
                 </form>
             @endforeach
         </div>

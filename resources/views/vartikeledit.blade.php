@@ -40,7 +40,7 @@
                         <input type = "file" id = "pict" name="pict">
                     </div>
                     <button type = "submit" class = "btn btn-default">Submit</button>
-                    <a type="reset" class="btn btn-md btn-danger" href="{{url('viewartikel')}}">Cancel</a>
+                    <a type="reset" class="btn btn-md btn-danger" href="{{route('viewartikel.index')}}">Cancel</a>
                 </form>
         </div>
 
