@@ -45,6 +45,9 @@ class CPhoto extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'pict' => 'required',
+        ]);
         $data = new \App\MPhoto();
         $file = $request->file('pict');
         $ext = $file->getClientOriginalExtension();
@@ -92,6 +95,9 @@ class CPhoto extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'pict' => 'required',
+        ]);
         $data = \App\MPhoto::findOrFail($id);
         if (empty($request->file('pict'))){
             $data->pict = $data->pict;

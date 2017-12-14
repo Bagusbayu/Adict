@@ -2,6 +2,15 @@
 @section('content')
     <section class="main-section">
         <div class="container">
+        @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+        @endif
             <form role = "form" action="{{ route('viewartikel.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class = "form-group">
@@ -21,7 +30,7 @@
                    <input type = "file" id = "pict" name="pict">
                 </div>
                 <button type = "submit" class = "btn btn-default">Submit</button>
-                <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+                <a type="reset" class="btn btn-md btn-danger" href="{{url('viewartikel')}}">Cancel</a>
             </form>
         </div>
     </section>

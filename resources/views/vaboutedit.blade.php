@@ -3,6 +3,15 @@
     <section class="main-section">
 
         <div class="container">
+         @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+        @endif
             @foreach($data as $datas)
                 <form role = "form" action="{{ route('viewabout.update', $datas->id) }}" method="post">
                     {{ csrf_field() }}
@@ -26,7 +35,7 @@
                     </div>
                     -->
                     <button type = "submit" class = "btn btn-default">Submit</button>
-                    <button type="reset" class="btn btn-md btn-danger">Cancel</button>
+                    <a type="reset" class="btn btn-md btn-danger" href="{{url('viewartikel')}}">Cancel</a>
                 </form>
             @endforeach
         </div>

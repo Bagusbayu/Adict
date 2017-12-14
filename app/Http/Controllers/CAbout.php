@@ -47,6 +47,11 @@ class CAbout extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'about' => 'required|min:4',
+            'misi' => 'required|min:4',
+            'visi' => 'required|min:4',
+        ]);
         $data = new MAbout();
         $data->about = $request->about;
         $data->misi = $request->misi;
@@ -92,6 +97,11 @@ class CAbout extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'about' => 'required|min:4',
+            'misi' => 'required|min:4',
+            'visi' => 'required|min:4',
+        ]);
         $data = MAbout::where('id',$id)->first();
         $data->about = $request->about;
         $data->misi = $request->misi;

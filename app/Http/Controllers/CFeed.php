@@ -42,6 +42,11 @@ class CFeed extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'name' => 'required|min:4',
+            'email' => 'required|min:4|email',
+            'comment' => 'required|min:4|max:300',
+        ]);
         $data = new Mfeed();
         $data->name = $request->name;
         $data->email = $request->email;

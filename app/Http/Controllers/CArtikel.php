@@ -46,6 +46,12 @@ class CArtikel extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'judul' => 'required|min:4',
+            'desc' => 'required|min:4',
+            'date' => 'required|min:4|date',
+            'pict' => 'required',
+        ]);
         $data = new \App\MArtikel();
         $data->judul = $request->input('judul');
         $data->slug = str_slug($data->judul);
@@ -97,6 +103,12 @@ class CArtikel extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'judul' => 'required|min:4',
+            'desc' => 'required|min:4',
+            'date' => 'required|min:4|date',
+            'pict' => 'required',
+        ]);
         $data = \App\MArtikel::findOrFail($id);
         $data->judul = $request->input('judul');
         $data->slug = str_slug($data->judul);

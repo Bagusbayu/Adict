@@ -46,7 +46,12 @@ class profilecompany extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
+        $this->validate($request, [
+            'address' => 'required|min:4',
+            'nophone' => 'required|min:4|int',
+            'email' => 'required|min:4|email',
+        ]);
         $data = new MProfile();
         $data->address = $request->address;
         $data->nophone = $request->nophone;
@@ -92,6 +97,11 @@ class profilecompany extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'address' => 'required|min:4',
+            'nophone' => 'required|min:4|int',
+            'email' => 'required|min:4|email',
+        ]);
         $data = MProfile::where('id',$id)->first();
         $data->address = $request->address;
         $data->nophone = $request->nophone;
