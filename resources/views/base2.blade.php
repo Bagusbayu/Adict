@@ -65,7 +65,7 @@
   }
   .carousel-control.right, .carousel-control.left {
       background-image: none;
-      color: #8b1aa5;
+      color: #FFF;
   }
   .carousel-indicators li {
       border-color: #8b1aa5;
@@ -146,7 +146,7 @@
   footer .glyphicon {
       font-size: 20px;
       margin-bottom: 20px;
-      color: #f4511e;
+      color: #000;
   }
   .slideanim {visibility:hidden;}
   .slide {
@@ -208,7 +208,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#artikel">ARTIKEL</a></li>
+        <li><a href="#artikel">ARTICLE</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>

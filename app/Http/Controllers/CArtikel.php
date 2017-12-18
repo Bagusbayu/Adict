@@ -48,7 +48,7 @@ class CArtikel extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|min:4',
-            'desc' => 'required|min:4',
+            'desc' => 'required|min:25',
             'date' => 'required|min:4|date',
             'pict' => 'required',
         ]);
@@ -105,7 +105,7 @@ class CArtikel extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|min:4',
-            'desc' => 'required|min:4',
+            'desc' => 'required|min:25',
             'date' => 'required|min:4|date',
             'pict' => 'required',
         ]);

@@ -17,7 +17,7 @@
                     <th>No</th>
                     <th>Judul</th>
                     <th>Slug</th>
-                    <th>Desc</th>
+                    <th>Description</th>
                     <th>Date</th>
                     <th>Pict</th>
                     <th>Action</th>

@@ -2,7 +2,6 @@
 @section('contents')
 
 <div class="jumbotron text-center">
-  <h1>ADICT BUSINESS CENTER</h1> 
   <p></p> 
   <!--<form>
     <div class="input-group">
@@ -25,7 +24,7 @@
     <div class="carousel-inner" role="listbox">
       @foreach($iya as $key => $iyas)
       <div class="item {{ $key == 0 ? ' active' : '' }}">
-      <img src="{{ url('uploads/file/'.$iyas->pict) }}" style="width: 100%; height: 500px;">
+      <img src="{{ url('uploads/file/'.$iyas->pict) }}" style="width: 100%; height: 590px;">
       </div>
 	  @endforeach
 	  </div>
@@ -89,7 +88,7 @@
 <!-- Container (Pricing Section) -->
 <div id="artikel" class="container-fluid">
   <div class="text-center">
-    <h2><a href="{{ url('artikel') }}">ARTIKEL</a></h2>
+    <h2><a href="{{ url('artikel') }}">ARTICLE</a></h2>
     <h4></h4>
   </div>
   <div class="row slideanim">

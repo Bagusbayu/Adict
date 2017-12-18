@@ -48,7 +48,7 @@ class CPortfolio extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|min:4',
-            'desc' => 'required|min:4',
+            'desc' => 'required|min:25',
             'webdev' => 'required|min:4',
             'launched' => 'required|min:4|date',
             'category' => 'required|min:4',
@@ -111,7 +111,7 @@ class CPortfolio extends Controller
     {
         $this->validate($request, [
             'judul' => 'required|min:4',
-            'desc' => 'required|min:4',
+            'desc' => 'required|min:25',
             'webdev' => 'required|min:4',
             'launched' => 'required|min:4|date',
             'category' => 'required|min:4',
